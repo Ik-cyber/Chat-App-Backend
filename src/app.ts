@@ -101,6 +101,10 @@ io.on('connection', (socket) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("Chat App Backend.")
+})
+
 // API route to manually fetch messages (optional)
 app.get('/api/messages', async (req, res) => {
   try {
