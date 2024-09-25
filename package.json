@@ -10,6 +10,11 @@
     "add-build": "git add dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -18,7 +23,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.21.0",
     "mongoose": "^8.6.3",
-    "socket.io": "^4.7.5"
+    "socket.io": "^4.7.5",
+    "vercel": "^37.5.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -29,10 +35,5 @@
     "nodemon": "^3.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
-  },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-]
+  }
 }
